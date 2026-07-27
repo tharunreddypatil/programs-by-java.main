@@ -1,0 +1,51 @@
+Task 5: Print all possible pairs of elements from an array of size n
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the number of elements
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Read array elements
+        System.out.println("Enter the array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Print all possible pairs
+        System.out.println("All possible pairs are:");
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                System.out.println("(" + arr[i] + ", " + arr[j] + ")");
+            }
+        }
+
+        sc.close();
+    }
+}
+
+
+
+
+Enter the number of elements: 4
+Enter the array elements:
+10
+20
+30
+40
+All possible pairs are:
+(10, 20)
+(10, 30)
+(10, 40)
+(20, 30)
+(20, 40)
+(30, 40)
+
+=== Code Execution Successful ===

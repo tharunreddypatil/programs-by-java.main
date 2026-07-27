@@ -1,0 +1,51 @@
+Task 3: Find the Maximum Element in an Array of n Integers 
+
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the number of elements
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
+
+        int[] arr = new int[n];
+
+        // Read array elements
+        System.out.println("Enter the array elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Assume first element is maximum
+        int max = arr[0];
+
+        // Find the maximum element
+        for (int i = 1; i < n; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        // Display the result
+        System.out.println("Maximum element = " + max);
+
+        sc.close();
+    }
+}
+
+
+
+
+Enter the number of elements: 5
+Enter the array elements:
+1
+3
+5
+6
+7
+Maximum element = 7
+
+=== Code Execution Successful ===

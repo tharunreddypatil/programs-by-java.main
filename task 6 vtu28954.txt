@@ -1,0 +1,53 @@
+Task 6: digitSum_opt â€“ Sum of Even or Odd Digit
+
+import java.util.Scanner;
+
+public class Main {
+
+    // Method to find the sum of even or odd digits
+    public static int digitSum(int num, String choice) {
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+
+            if (choice.equalsIgnoreCase("even")) {
+                if (digit % 2 == 0) {
+                    sum += digit;
+                }
+            } else if (choice.equalsIgnoreCase("odd")) {
+                if (digit % 2 != 0) {
+                    sum += digit;
+                }
+            }
+
+            num = num / 10;
+        }
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        System.out.print("Enter your choice (even/odd): ");
+        String choice = sc.next();
+
+        int result = digitSum(num, choice);
+
+        System.out.println("Sum of " + choice + " digits = " + result);
+
+        sc.close();
+    }
+}
+
+
+
+Enter a number: 123456
+Enter your choice (even/odd): even
+Sum of even digits = 12
+
+=== Code Execution Successful ===
